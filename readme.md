@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="./heimdall_logo.svg" alt="Heimdall" width="640"/>
+<img src="images\heimdall_readme.jpg" alt="Heimdall" width="640"/>
 
 # 🛡️ Heimdall
 
 **O guardião do Sistema Financeiro Nacional.**
 
-*Na mitologia nórdica, Heimdall vigia o Bifröst e enxerga os nove reinos. Aqui, ele vigia o SFN e enxerga todos os bancos — capital, liquidez, crédito e rentabilidade, em tempo (quase) real.*
+*Na mitologia nórdica, Heimdall vigia o Bifröst e enxerga os nove reinos. Aqui, ele vigia o SFN e enxerga todos os bancos. Capital, liquidez, crédito e rentabilidade*.
 
 ![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.40-FF4B4B?logo=streamlit&logoColor=white)
@@ -18,9 +18,9 @@
 
 ---
 
-## 👁️ Visão geral
+## Visão geral
 
-**Heimdall** é um dashboard interativo que consome dados públicos do Banco Central do Brasil e exibe as principais métricas prudenciais dos bancos brasileiros, sempre acompanhadas dos limites regulatórios que as governam. Cada indicador mostra **o número, o limite mínimo e o artigo da norma** que o define — porque vigiar sem contexto regulatório é só olhar.
+**Heimdall** é um dashboard que consome dados públicos do Banco Central do Brasil e exibe as principais métricas regulatórias de bancos brasileiros, sempre acompanhadas dos limites regulatórios que as governam.
 
 > *"Nenhuma instituição passa pela ponte sem ser vista."*
 
@@ -43,9 +43,9 @@
 
 ## 🌈 Identidade visual
 
-A marca é construída sobre dois símbolos: **o olho que tudo vê** e o **Bifröst**, a ponte de arco-íris — aqui reinterpretada como um medidor regulatório que vai do risco baixo ao crítico.
+A marca é construída sobre dois símbolos: **o olho que tudo vê** e o **Bifröst**, a ponte de arco-íris.
 
-**Paleta — "Bifröst sobre Asgard noturna"**
+**Paleta: "Bifröst sobre Asgard noturna"**
 
 | Cor | Hex | Uso |
 |---|---|---|
@@ -67,21 +67,20 @@ A marca é construída sobre dois símbolos: **o olho que tudo vê** e o **Bifr�
 heimdall/
 ├── app.py                      # Entrada principal (Streamlit)
 ├── data/
-│   ├── bacen_api.py            # Wrappers para IF.data e SGS
-│   └── transformers.py         # Limpeza e cálculo das métricas
+│   ├── raw
+│   └── processed
+└── images/
+    └── heimdall_readme.jpg
 ├── pages/
 │   ├── 1_capital.py
 │   ├── 2_liquidez.py
 │   ├── 3_credito.py
 │   ├── 4_rentabilidade.py
 │   └── 5_comparativo.py
-├── components/
-│   ├── gauge.py                # Gauge regulatório (Bifröst)
-│   └── kpi_card.py             # Cards de indicadores
-├── config/
-│   └── limites_regulatorios.py # Constantes das normas (limites mínimos)
-└── assets/
-    └── heimdall_logo.svg
+├── pipelines/
+│   └── jobs/
+    └── notebooks/
+
 ```
 
 ---
@@ -96,36 +95,6 @@ Todas públicas e gratuitas:
 
 ---
 
-## 🚀 Como rodar
-
-```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/heimdall.git
-cd heimdall
-
-# Ambiente virtual
-python -m venv .venv && source .venv/bin/activate
-
-# Dependências
-pip install -r requirements.txt
-
-# Invoque o guardião
-streamlit run app.py
-```
-
-O app abre em `http://localhost:8501`.
-
----
-
-## 🗺️ Roadmap
-
-- [ ] Stress testing de cenários (à la *WOPR*)
-- [ ] Detecção automática de quebra de limite com notificação
-- [ ] Comparação internacional via dados do BIS
-- [ ] Modo "Ragnarök": simulação de choques sistêmicos
-
----
-
 ## 📜 Aviso
 
 Projeto **educacional / de portfólio**. As métricas são calculadas a partir de dados públicos e não constituem aconselhamento financeiro, regulatório ou de investimento.
@@ -134,8 +103,9 @@ Projeto **educacional / de portfólio**. As métricas são calculadas a partir d
 
 <div align="center">
 
-*Construído com ⚡ por um cientista de dados de risco de crédito.*
+*Construído por Richard, cientista de dados apaixonado pelo mercado de crédito"
 
 **Heimdall vê tudo. Bom proveito.**
 
+⚡
 </div>

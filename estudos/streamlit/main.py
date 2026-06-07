@@ -14,6 +14,8 @@ Espero que você curta a experiência da nossa solução! (:
          
 """)
 
+
+
 df = pd.read_csv(r"G:\Meu Drive\Heimdall\data\raw\instituicoes_financeiras_202412.csv")
 
 exp1 = st.expander("Dados brutos")
